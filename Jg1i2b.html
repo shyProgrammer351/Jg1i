@@ -119,22 +119,20 @@ WASD와[Enter]를 입력하세요: <b><span style='color:rgb(255,0,0);'>q</span>
 	} 
  
 	<input id='blank42' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='6' onchange='sP3f6(42)'> void move( char direction ) { 
-		int directionX = STOP, directionY = STOP; 
 		<input id='blank43' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='6' onchange='sP3f6(43)'>( direction ) { 
 			<input id='blank44' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(44)'> 'W': <input id='blank45' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(45)'> 'w':  
-				directionY = UP; 
+				move( STOP, UP ); 
 				<input id='blank46' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(46)'>; 
 			<input id='blank47' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(47)'> 'A': <input id='blank48' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(48)'> 'a':  
-				directionX = LEFT; 
+				move( LEFT, STOP ); 
 				<input id='blank49' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(49)'>; 
 			<input id='blank50' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(50)'> 'S': <input id='blank51' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(51)'> 's':  
-				directionY = DOWN; 
+				move( STOP, DOWN ); 
 				<input id='blank52' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(52)'>; 
 			<input id='blank53' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(53)'> 'D': <input id='blank54' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(54)'> 'd':  
-				directionX = RIGHT; 
+				move( RIGHT, STOP ); 
 				<input id='blank55' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(55)'>; 
 		} 
-		move( directionX, directionY ); 
 	} 
  
 	<input id='blank56' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='6' onchange='sP3f6(56)'> void move( int directionX, int directionY ) { 
@@ -153,7 +151,7 @@ WASD와[Enter]를 입력하세요: <b><span style='color:rgb(255,0,0);'>q</span>
 	<input id='blank76' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='6' onchange='sP3f6(76)'> String <input id='blank77' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(77)'>() { 
 		String strMap = "\033[1;1f";	 
 		<input id='blank78' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='3' onchange='sP3f6(78)'>( int y = minY; y &lt;= maxY; y++ ) { 
-			<input id='blank79' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='3' onchange='sP3f6(79)'>( int x = minY; x &lt;= maxX; x++ ) { 
+			<input id='blank79' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='3' onchange='sP3f6(79)'>( int x = minX; x &lt;= maxX; x++ ) { 
 				strMap += symbol[ map[y][x] ]; 
 			} 
 			strMap += "\n"; 
